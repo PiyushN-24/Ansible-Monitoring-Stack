@@ -59,7 +59,7 @@ Here’s a quick overview of the project’s directory structure:
     ├── prometheus_node_exporter
     └── alertmanager
 ```
-Key Files:
+** Key Files:- **
 - ansible.cfg: Configuration file for Ansible settings.
 - inventory: Defines the target hosts (master and slave nodes).
 - playbook.yml: Main playbook that orchestrates the setup of the monitoring stack.
@@ -70,7 +70,7 @@ Key Files:
 Editing the Inventory
 Update the inventory file with your target nodes. The inventory defines the group of nodes (master and slave nodes) where the monitoring stack will be deployed.
 
-Example:
+** Example:- **
 ```
 [prometheus]
 13.127.66.77
@@ -88,24 +88,24 @@ You can also modify the ansible.cfg file to set the default connection parameter
 
 ## Tools/Components Used 
 
-1) Grafana
+**1) Grafana**
 Grafana is an open-source platform for monitoring and observability. It allows you to visualize time-series data from Prometheus through customizable dashboards.
 - Port: 3000 (default).
 - Usage: After installation, navigate to http://<GRAFANA_IP>:3000 to access the web interface. The default login is admin/admin.
 ![Grafana Dashboard](./images/Grafana.png)
 
-2) Prometheus
+**2) Prometheus**
 Prometheus is an open-source monitoring and alerting toolkit used for collecting and storing metrics as time-series data. Prometheus scrapes metrics exposed by various targets (e.g., Node Exporter).
 - Port: 9090 (default).
 - Usage: After installation, navigate to http://<PROMETHEUS_IP>:9090 to access the web interface.
 ![Prometheus Dashboard](./images/Prometheus.png)
 
-3) Prometheus Node Exporter
+**3) Prometheus Node Exporter**
 The Prometheus Node Exporter exposes hardware and OS metrics, such as CPU, memory, disk usage, and network statistics, making them available to Prometheus for collection.
 - Port: 9100 (default).
 ![Prometheus Node Exporter Dashboard](./images/Prometheus_Node_Exporter.png)
 
-4) Alertmanager
+**4) Alertmanager**
 Alertmanager handles alerts sent by Prometheus and manages notifications. You can configure it to send alerts to Slack, email, or other communication channels.
 - Port: 9093 (default).
 - Usage: Navigate to http://<ALERTMANAGER_IP>:9093 to view alert configurations.
