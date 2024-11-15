@@ -1,9 +1,9 @@
 # Ansible Monitoring Stack
-![Ansible](https://img.shields.io/badge/Automation-Ansible-red?style=flat-square)
-![Grafana](https://img.shields.io/badge/Monitoring-Grafana-orange?style=flat-square)
-![Prometheus](https://img.shields.io/badge/Monitoring-Prometheus-brightgreen?style=flat-square)
-![Node Exporter](https://img.shields.io/badge/Metrics-Node_Exporter-yellow?style=flat-square)
-![Alertmanager](https://img.shields.io/badge/Alerts-Alertmanager-purple?style=flat-square)
+![Ansible](https://img.shields.io/badge/Ansible-red?style=flat-square)
+![Grafana](https://img.shields.io/badge/Grafana-orange?style=flat-square)
+![Prometheus](https://img.shields.io/badge/Prometheus-brightgreen?style=flat-square)
+![Node Exporter](https://img.shields.io/badge/Node_Exporter-yellow?style=flat-square)
+![Alertmanager](https://img.shields.io/badge/Alertmanager-purple?style=flat-square)
 
 
 An Ansible-based Monitoring Stack project designed to automate the deployment and configuration of Grafana, Prometheus, Prometheus Node Exporter, and Alertmanager across a set of nodes. This repository aims to simplify infrastructure monitoring using a reliable and scalable solution.
