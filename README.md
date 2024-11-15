@@ -1,8 +1,14 @@
-Ansible Monitoring Stack
+# Ansible Monitoring Stack
+![Ansible](https://img.shields.io/badge/Automation-Ansible-red?style=flat-square)
+![Grafana](https://img.shields.io/badge/Monitoring-Grafana-orange?style=flat-square)
+![Prometheus](https://img.shields.io/badge/Monitoring-Prometheus-brightgreen?style=flat-square)
+![Node Exporter](https://img.shields.io/badge/Metrics-Node_Exporter-yellow?style=flat-square)
+![Alertmanager](https://img.shields.io/badge/Alerts-Alertmanager-purple?style=flat-square)
+
 
 An Ansible-based Monitoring Stack project designed to automate the deployment and configuration of Grafana, Prometheus, Prometheus Node Exporter, and Alertmanager across a set of nodes. This repository aims to simplify infrastructure monitoring using a reliable and scalable solution.
 
-Project Overview
+## Project Overview
 
 This project automates the installation and configuration of a complete monitoring stack using Ansible. It includes the setup of:
 
@@ -13,7 +19,7 @@ This project automates the installation and configuration of a complete monitori
 
 With this setup, users can monitor their systems, get real-time insights into performance, and receive timely alerts for critical events. The goal of this project is to make it easy to deploy a full monitoring stack in any environment using Ansible.
 
-Prerequisites
+## Prerequisites
 
 Before running the playbook, ensure the following prerequisites are in place:
 
@@ -39,7 +45,7 @@ Installation on Target Nodes (Slaves) :-
 
 Ensure the target nodes are accessible via SSH and have the necessary dependencies installed (Python and Ansible requirements).
 
-Project Structure
+## Project Structure
 
 Here’s a quick overview of the project’s directory structure:
 ```
@@ -59,7 +65,7 @@ Key Files:
 - playbook.yml: Main playbook that orchestrates the setup of the monitoring stack.
 - Roles Directory: Contains individual Ansible roles for each monitoring tool (Grafana, Prometheus, etc.).
 
-Configuration
+## Configuration
 
 Editing the Inventory
 Update the inventory file with your target nodes. The inventory defines the group of nodes (master and slave nodes) where the monitoring stack will be deployed.
@@ -80,7 +86,7 @@ Example:
 ```
 You can also modify the ansible.cfg file to set the default connection parameters, such as SSH user, SSH keys, and so on.
 
-Tools/Components Used 
+## Tools/Components Used 
 
 1) Grafana
 Grafana is an open-source platform for monitoring and observability. It allows you to visualize time-series data from Prometheus through customizable dashboards.
@@ -105,7 +111,7 @@ Alertmanager handles alerts sent by Prometheus and manages notifications. You ca
 - Usage: Navigate to http://<ALERTMANAGER_IP>:9093 to view alert configurations.
 ![Alertmanager Dashboard](./images/Alertmanager.png)
 
-Usage Examples 
+## Usage Examples 
 
 To deploy the entire monitoring stack, Run the Ansible playbook to deploy Grafana, Prometheus, Node Exporter, and Alertmanager:
 ```
@@ -117,6 +123,6 @@ After the playbook completes, verify the services on each node:
 -   Node Exporter: http://<NODE_EXPORTER_IP>:9100
 -   Alertmanager: http://<ALERTMANAGER_IP>:9093
 
-Conclusion
+## Conclusion
 
 This Ansible-based monitoring stack provides a comprehensive solution for monitoring your infrastructure. With the combination of Grafana, Prometheus, Prometheus Node Exporter, and Alertmanager, users can easily visualize performance metrics, monitor system health, and receive timely alerts.
