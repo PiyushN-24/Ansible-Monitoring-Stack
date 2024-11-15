@@ -1,0 +1,22 @@
+- name: Install Grafana
+  apt:
+    deb: "https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_{{ version }}_amd64.deb"
+    state: present
+
+- name: "Grafana configuration file copy"
+  template:
+    src: "grafana.conf.j2"
+    dest: /etc/grafana/grafana.ini
+  notify: event_restart_grafana
+
+- name: "Grafana server started"
+  service:
+    name: grafana-server
+    enabled: true
+    state: started
+
+- name: "Check if Grafana is accessible."
+  uri:
+    url: http://localhost:3000
+    method: GET
+    status_code: 200
