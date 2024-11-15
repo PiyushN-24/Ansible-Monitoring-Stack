@@ -36,8 +36,8 @@ sudo apt install ansible -y
 ```
 Clone this repository:
 ```
-    git clone https://github.com/PiyushN-24/Ansible-Monitoring-Stack.git
-    cd Ansible-Monitoring-Stack
+git clone https://github.com/PiyushN-24/Ansible-Monitoring-Stack.git
+cd Ansible-Monitoring-Stack
 ```
 
 Installation on Target Nodes (Slaves) :-
@@ -58,7 +58,7 @@ Here’s a quick overview of the project’s directory structure:
     ├── prometheus_node_exporter
     └── alertmanager
 ```
-** Key Files:- **
+**Key Files:**
 - ansible.cfg: Configuration file for Ansible settings.
 - inventory: Defines the target hosts (master and slave nodes).
 - playbook.yml: Main playbook that orchestrates the setup of the monitoring stack.
@@ -69,7 +69,7 @@ Here’s a quick overview of the project’s directory structure:
 Editing the Inventory
 Update the inventory file with your target nodes. The inventory defines the group of nodes (master and slave nodes) where the monitoring stack will be deployed.
 
-** Example:- **
+**Example:**
 ```
 [prometheus]
 13.127.66.77
